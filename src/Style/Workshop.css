@@ -1,0 +1,213 @@
+/* ========== GRID LAYOUT ========== */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+/* ========== WORKSHOP CARD ========== */
+.workshop-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Section */
+.workshop-img {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Content Section */
+.workshop-content {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.workshop-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.workshop-content p {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.workshop-type {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  margin-top: 0.4rem;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+.workshop-type.free {
+  background: #e8f9e9;
+  color: #2e7d32;
+}
+
+.workshop-type.paid {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* Buttons */
+.apply-btn,
+.registered-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-btn {
+  background: #007bff;
+  color: white;
+}
+
+.apply-btn:hover {
+  background: #005fcc;
+}
+
+.registered-btn {
+  background: #ccc;
+  color: #444;
+  cursor: not-allowed;
+}
+
+/* ========== MODAL OVERLAY ========== */
+.workshop-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* ensures it's above all other elements */
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ========== MODAL CONTENT ========== */
+.workshop-form-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+  animation: scaleIn 0.25s ease-in-out;
+}
+
+.workshop-form-container h2 {
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.workshop-form-container p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons inside modal */
+.form-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancel-btn,
+.confirm-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #bdbdbd;
+}
+
+.confirm-btn {
+  background: #007bff;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: #005fcc;
+}
+
+.confirm-btn:disabled {
+  background: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .workshop-card {
+    border-radius: 0.8rem;
+  }
+
+  .workshop-form-container {
+    padding: 1.5rem;
+  }
+
+  .workshop-content h3 {
+    font-size: 1.05rem;
+  }
+}
