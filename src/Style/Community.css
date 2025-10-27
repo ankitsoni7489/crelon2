@@ -1,0 +1,148 @@
+/* === ROOT VARIABLES === */
+:root {
+  --clr-1: #eeaf92;
+  --clr-2: #f57336;
+  --clr-3: #f76724;
+  --clr-4: #FF5100;
+}
+
+/* === INFO CARD SECTION === */
+.info-card-head {
+  /* background-color: #e0dddb;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.info-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Heading container */
+.heading {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heading h1 {
+  font-size: 54px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Animated gradient title */
+.title {
+  position: relative;
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-1)
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textColorFlow 6s linear infinite;
+}
+
+@keyframes textColorFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Paragraph styling */
+.para {
+  color: #8D8B98;
+  font-size: 19px;
+  margin: 10px 0 20px 0;
+  width: 60%;
+  text-align: center;
+}
+
+/* Join button styling */
+.join-btn {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+/* .join-btn button {
+  width: 200px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FF5100;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+} */
+
+/* .join-btn button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(255, 81, 0, 0.25);
+  filter: brightness(1.1);
+} */
+
+/* Remove aurora background effect */
+.aurora {
+  display: none;
+}
+
+/* === RESPONSIVE === */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .title { font-size: 60px; }
+  .heading h1 { font-size: 45px; }
+  .para { width: 75%; font-size: 18px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .info-card-head{
+    height: auto;
+  }
+  .title { font-size: 50px; }
+  .heading h1 { font-size: 38px; }
+  .para { width: 90%; font-size: 16px; }
+  .join-btn{
+    display: flex;
+    
+    gap: 20px;
+  }
+  .join-btn button { 
+    width: 160px; 
+    height: 40px; 
+    font-size: 15px; 
+  }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .info-card-head{
+    height: auto;
+  }
+  .title { font-size: 40px; }
+  .heading h1 { font-size: 30px; }
+  .para { font-size: 14px; }
+  .join-btn button { width: 140px; height: 38px; font-size: 14px; }
+}

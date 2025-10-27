@@ -1,0 +1,103 @@
+.card2{
+    height: max-content;
+    border-radius: 20px;
+    width: max-content;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon-container i{
+    font-size: 35px;
+    color: #fff;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text-container h3{
+    color: #fff;
+}
+.text-container p{
+    color: #fff;
+}
+
+.list-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list-container ul li{
+    color: #fff;
+    font-size: 15px;
+}
+.list-container ul li div{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-container1 button{
+    background-color: #fff;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .card2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    margin: 15px;
+  }
+  .icon-container i { font-size: 30px; }
+  .text-container h3 { font-size: 1.3rem; }
+  .text-container p { font-size: 0.95rem; }
+  .list-container ul li { font-size: 14px; }
+  .btn-container1 button { width: 180px; height: 38px; font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  .card2 {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin: 12px;
+    width: 100%; /* make card full width on tablet */
+  }
+  .icon-container i { font-size: 28px; }
+  .text-container h3 { font-size: 1.1rem; }
+  .text-container p { font-size: 0.9rem; }
+  .list-container ul li { font-size: 13px; }
+  .btn-container1 button { width: 160px; height: 36px; font-size: 13px; }
+}
+
+@media (max-width: 420px) {
+  .card2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin: 10px;
+    width: 100%; /* full width on mobile */
+  }
+  .icon-container i { font-size: 25px; }
+  .text-container h3 { font-size: 1rem; }
+  .text-container p { font-size: 0.85rem; }
+  .list-container ul li { font-size: 12px; }
+  .btn-container1 button { width: 140px; height: 34px; font-size: 12px; }
+}

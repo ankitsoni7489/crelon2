@@ -1,0 +1,136 @@
+/* === FOOTER BASE STYLE === */
+.footer {
+  width: 100%;
+  background: #101524;
+  color: #d0d6ea;
+  padding: 36px 24px 50px 24px;
+  font-size: 15px;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows responsiveness */
+  gap: 30px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  flex: 1;
+}
+
+.brand {
+  min-width: 270px;
+  max-width: 270px;
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  color: #aac0eb;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 1.07rem;
+}
+
+.footer-col a {
+  color: #d0d6ea;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+  font-size: 0.98rem;
+}
+
+.footer-col a:hover {
+  color: #FF5100;
+}
+
+.footer-bottom {
+  color: #a1a6b8;
+  font-size: 0.98rem;
+  text-align: center;
+  margin-top: 38px;
+  border-top: 1px solid #232746;
+  padding-top: 20px;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-content {
+    justify-content: space-around;
+  }
+  .brand {
+    min-width: 200px;
+    max-width: 200px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-col {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer-logo img {
+    height: 50px;
+    width: 120px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+  .footer {
+    padding: 24px 12px 36px 12px;
+  }
+
+  .footer-desc {
+    font-size: 0.9rem;
+  }
+
+  .footer-heading {
+    font-size: 1rem;
+  }
+
+  .footer-col a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+    padding-top: 15px;
+  }
+
+  .footer-logo img {
+    height: 40px;
+    width: 100px;
+  }
+}

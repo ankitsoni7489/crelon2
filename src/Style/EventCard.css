@@ -1,0 +1,138 @@
+/* === EVENT CARD === */
+.event-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(60, 62, 70, 0.07);
+  overflow: hidden;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  transition: transform 0.23s ease, box-shadow 0.23s ease, border 0.23s ease;
+  border: 2px solid transparent;
+  margin: 0 auto 32px auto;
+  z-index: 1;
+}
+
+.event-card:hover {
+  transform: translateY(-4px) scale(1.018);
+  border: 2px solid #FF5100;
+  box-shadow: 0 12px 28px rgba(98, 69, 247, 0.11);
+}
+
+/* === EVENT IMAGE === */
+.event-img {
+  height: 190px;
+  background: #eee;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+}
+
+/* === EVENT DETAILS === */
+.event-details {
+  padding: 24px 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* === EVENT TAGS === */
+.event-tags {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 2px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.91rem;
+  background: #eff0f8;
+  color: #804f39;
+  border-radius: 8px;
+  padding: 4px 15px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.tag.workshop { background: #e2ecfa; color: #31629a; }
+.tag.hackathon { background: #f6eafe; color: #933dc7; }
+.tag.networking { background: #ffe5cf; color: #ca770f; }
+.tag.status { background: #f6eafe; color: #9d4edd; }
+
+/* === EVENT TITLE AND DESCRIPTION === */
+.event-title {
+  font-size: 1.19rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #15153d;
+}
+
+.event-description {
+  color: #44496a;
+  font-size: 1.04rem;
+  margin-bottom: 8px;
+}
+
+/* === EVENT META INFO === */
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  font-size: 0.96rem;
+  color: #b8623a;
+  margin-bottom: 12px;
+}
+
+.event-meta i {
+  margin-right: 7px;
+  color: #a56649;
+  font-size: 1.08em;
+}
+
+/* === REGISTER BUTTON === */
+.event-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.register-btn {
+  background: linear-gradient(90deg, #FF5100 0%, #ff9900 45%, #e74900b6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.08rem;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(114, 45, 239, 0.07);
+  transition: background 0.14s ease, filter 0.14s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.register-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* === RESPONSIVE STYLING === */
+@media (max-width: 1024px) {
+  .event-card { width: 90%; }
+}
+
+@media (max-width: 768px) {
+  .event-card { width: 100%; margin-bottom: 24px; }
+  .event-img { height: 160px; }
+}
+
+@media (max-width: 420px) {
+  .event-title { font-size: 1.05rem; }
+  .event-description { font-size: 0.95rem; }
+  .register-btn { font-size: 1rem; padding: 10px 0; }
+  .event-img { height: 140px; }
+}
